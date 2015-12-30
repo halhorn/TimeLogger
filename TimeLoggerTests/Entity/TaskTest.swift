@@ -14,7 +14,8 @@ class TaskTest: XCTestCase, ITaskDelegate {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.changedProperty = nil
+        self.changedValue = nil
     }
     
     override func tearDown() {
@@ -33,9 +34,9 @@ class TaskTest: XCTestCase, ITaskDelegate {
     func testNameChange() {
         let task = Task(taskId: 1, groupId: 2, name: "name", createdAt: NSDate(timeIntervalSince1970: 0))
         task.delegate = self;
+        XCTAssertNil(self.changedProperty)
+        XCTAssertNil(self.changedValue)
         
-        self.changedProperty = nil
-        self.changedValue = nil
         task.name = "newName"
         XCTAssertEqual(task.name, "newName")
         XCTAssertEqual(self.changedProperty!, TaskProperty.Name)
