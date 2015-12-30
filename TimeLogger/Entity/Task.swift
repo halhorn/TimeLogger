@@ -15,7 +15,7 @@ enum TaskProperty {
     case CreatedAt
 }
 
-protocol ITaskDelegate {
+protocol ITaskDelegate : class {
     func didTaskUpdate(property : TaskProperty, task : Task)
 }
 
@@ -28,7 +28,7 @@ class Task : Equatable {
         }
     }
     private(set) var createdAt : NSDate
-    var delegate : ITaskDelegate?
+    weak var delegate : ITaskDelegate?
     
     init(taskId : Int, groupId : Int, name : String, createdAt : NSDate) {
         self.taskId = taskId
