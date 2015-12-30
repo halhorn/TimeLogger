@@ -16,6 +16,9 @@
 		2918C1D51C31808200C07CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2918C1D31C31808200C07CCE /* LaunchScreen.storyboard */; };
 		2918C1E01C31808200C07CCE /* TimeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1DF1C31808200C07CCE /* TimeLoggerTests.swift */; };
 		2918C1EB1C31808200C07CCE /* TimeLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1EA1C31808200C07CCE /* TimeLoggerUITests.swift */; };
+		292AE2B11C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
+		292AE2B21C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
+		292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B41C33CDFA008AB2FA /* TaskTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		2918C1E61C31808200C07CCE /* TimeLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2918C1EA1C31808200C07CCE /* TimeLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggerUITests.swift; sourceTree = "<group>"; };
 		2918C1EC1C31808200C07CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		292AE2B01C33AE05008AB2FA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		292AE2B41C33CDFA008AB2FA /* TaskTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		2918C1C51C31808200C07CCE /* TimeLogger */ = {
 			isa = PBXGroup;
 			children = (
+				292AE2AF1C33AD80008AB2FA /* Entity */,
 				2918C1C61C31808200C07CCE /* AppDelegate.swift */,
 				2918C1C81C31808200C07CCE /* RootViewController.swift */,
 				2918C1CA1C31808200C07CCE /* DataViewController.swift */,
@@ -116,6 +122,7 @@
 		2918C1DE1C31808200C07CCE /* TimeLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
+				292AE2B31C33CDCA008AB2FA /* Entity */,
 				2918C1DF1C31808200C07CCE /* TimeLoggerTests.swift */,
 				2918C1E11C31808200C07CCE /* Info.plist */,
 			);
@@ -129,6 +136,22 @@
 				2918C1EC1C31808200C07CCE /* Info.plist */,
 			);
 			path = TimeLoggerUITests;
+			sourceTree = "<group>";
+		};
+		292AE2AF1C33AD80008AB2FA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				292AE2B01C33AE05008AB2FA /* Task.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		292AE2B31C33CDCA008AB2FA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				292AE2B41C33CDFA008AB2FA /* TaskTest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +287,7 @@
 			files = (
 				2918C1C91C31808200C07CCE /* RootViewController.swift in Sources */,
 				2918C1CD1C31808200C07CCE /* ModelController.swift in Sources */,
+				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
 				2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */,
 			);
@@ -273,6 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292AE2B21C33AE05008AB2FA /* Task.swift in Sources */,
+				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
 				2918C1E01C31808200C07CCE /* TimeLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +516,7 @@
 				2918C1F11C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2918C1F21C31808200C07CCE /* Build configuration list for PBXNativeTarget "TimeLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +525,7 @@
 				2918C1F41C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2918C1F51C31808200C07CCE /* Build configuration list for PBXNativeTarget "TimeLoggerUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +534,7 @@
 				2918C1F71C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
