@@ -18,6 +18,9 @@
 		292AE2B11C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
 		292AE2B21C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
 		292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B41C33CDFA008AB2FA /* TaskTest.swift */; };
+		292AE2B71C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
+		292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
+		292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 		2918C1EC1C31808200C07CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		292AE2B01C33AE05008AB2FA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		292AE2B41C33CDFA008AB2FA /* TaskTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTest.swift; sourceTree = "<group>"; };
+		292AE2B61C33D815008AB2FA /* TaskLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLog.swift; sourceTree = "<group>"; };
+		292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				292AE2B01C33AE05008AB2FA /* Task.swift */,
+				292AE2B61C33D815008AB2FA /* TaskLog.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				292AE2B41C33CDFA008AB2FA /* TaskTest.swift */,
+				292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
 				2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */,
+				292AE2B71C33D815008AB2FA /* TaskLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				292AE2B21C33AE05008AB2FA /* Task.swift in Sources */,
+				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
+				292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
