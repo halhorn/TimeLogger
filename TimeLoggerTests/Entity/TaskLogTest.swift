@@ -47,6 +47,25 @@ class TaskLogTest: XCTestCase, ITaskLogDelegate {
         XCTAssertEqual(self.changedValue!.endedAt, NSDate(timeIntervalSince1970: 10))
     }
     
+    func testEqual() {
+        XCTAssertEqual(
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10)),
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+        )
+        XCTAssertNotEqual(
+            TaskLog(taskId: 2, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10)),
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+        )
+        XCTAssertNotEqual(
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 1), endedAt: NSDate(timeIntervalSince1970: 10)),
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+        )
+        XCTAssertNotEqual(
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 11)),
+            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+        )
+    }
+    
     func didTaskLogUpdate(property: TaskLogProperty, taskLog: TaskLog) {
         self.changedProperty = property
         self.changedValue = taskLog

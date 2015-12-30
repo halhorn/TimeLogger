@@ -51,6 +51,8 @@ class TaskLog : Equatable {
 
 func == (left : TaskLog, right: TaskLog) -> Bool {
     return left.taskId == right.taskId
+        && left.startedAt == right.startedAt
+        && left.endedAt == right.endedAt
 }
 
 func != (left : TaskLog, right: TaskLog) -> Bool {
