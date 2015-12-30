@@ -40,6 +40,7 @@ class TaskTest: XCTestCase, ITaskDelegate {
         XCTAssertEqual(task.name, "newName")
         XCTAssertEqual(self.changedProperty!, TaskProperty.Name)
         XCTAssertEqual(self.changedValue!, task)
+        XCTAssertEqual(self.changedValue!.name, "newName")
     }
     
     func didTaskUpdate(property: TaskProperty, task: Task) {
