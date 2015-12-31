@@ -14,8 +14,16 @@
 		2918C1D01C31808200C07CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2918C1CE1C31808200C07CCE /* Main.storyboard */; };
 		2918C1D21C31808200C07CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2918C1D11C31808200C07CCE /* Assets.xcassets */; };
 		2918C1D51C31808200C07CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2918C1D31C31808200C07CCE /* LaunchScreen.storyboard */; };
-		2918C1E01C31808200C07CCE /* TimeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1DF1C31808200C07CCE /* TimeLoggerTests.swift */; };
 		2918C1EB1C31808200C07CCE /* TimeLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1EA1C31808200C07CCE /* TimeLoggerUITests.swift */; };
+		292AE2B11C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
+		292AE2B21C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
+		292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B41C33CDFA008AB2FA /* TaskTest.swift */; };
+		292AE2B71C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
+		292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
+		292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */; };
+		292AE2BC1C33F1F9008AB2FA /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */; };
+		292AE2BD1C33F1F9008AB2FA /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */; };
+		292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +54,16 @@
 		2918C1D41C31808200C07CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2918C1D61C31808200C07CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2918C1DB1C31808200C07CCE /* TimeLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2918C1DF1C31808200C07CCE /* TimeLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggerTests.swift; sourceTree = "<group>"; };
 		2918C1E11C31808200C07CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2918C1E61C31808200C07CCE /* TimeLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2918C1EA1C31808200C07CCE /* TimeLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggerUITests.swift; sourceTree = "<group>"; };
 		2918C1EC1C31808200C07CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		292AE2B01C33AE05008AB2FA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		292AE2B41C33CDFA008AB2FA /* TaskTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTest.swift; sourceTree = "<group>"; };
+		292AE2B61C33D815008AB2FA /* TaskLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLog.swift; sourceTree = "<group>"; };
+		292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogTest.swift; sourceTree = "<group>"; };
+		292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
+		292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGroupTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 		2918C1C51C31808200C07CCE /* TimeLogger */ = {
 			isa = PBXGroup;
 			children = (
+				292AE2AF1C33AD80008AB2FA /* Entity */,
 				2918C1C61C31808200C07CCE /* AppDelegate.swift */,
 				2918C1C81C31808200C07CCE /* RootViewController.swift */,
 				2918C1CA1C31808200C07CCE /* DataViewController.swift */,
@@ -116,7 +130,7 @@
 		2918C1DE1C31808200C07CCE /* TimeLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2918C1DF1C31808200C07CCE /* TimeLoggerTests.swift */,
+				292AE2B31C33CDCA008AB2FA /* Entity */,
 				2918C1E11C31808200C07CCE /* Info.plist */,
 			);
 			path = TimeLoggerTests;
@@ -129,6 +143,26 @@
 				2918C1EC1C31808200C07CCE /* Info.plist */,
 			);
 			path = TimeLoggerUITests;
+			sourceTree = "<group>";
+		};
+		292AE2AF1C33AD80008AB2FA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				292AE2B01C33AE05008AB2FA /* Task.swift */,
+				292AE2B61C33D815008AB2FA /* TaskLog.swift */,
+				292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		292AE2B31C33CDCA008AB2FA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				292AE2B41C33CDFA008AB2FA /* TaskTest.swift */,
+				292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */,
+				292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +298,11 @@
 			files = (
 				2918C1C91C31808200C07CCE /* RootViewController.swift in Sources */,
 				2918C1CD1C31808200C07CCE /* ModelController.swift in Sources */,
+				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
+				292AE2BC1C33F1F9008AB2FA /* TaskGroup.swift in Sources */,
 				2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */,
+				292AE2B71C33D815008AB2FA /* TaskLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2918C1E01C31808200C07CCE /* TimeLoggerTests.swift in Sources */,
+				292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */,
+				292AE2B21C33AE05008AB2FA /* Task.swift in Sources */,
+				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
+				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
+				292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */,
+				292AE2BD1C33F1F9008AB2FA /* TaskGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +532,7 @@
 				2918C1F11C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2918C1F21C31808200C07CCE /* Build configuration list for PBXNativeTarget "TimeLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +541,7 @@
 				2918C1F41C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2918C1F51C31808200C07CCE /* Build configuration list for PBXNativeTarget "TimeLoggerUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +550,7 @@
 				2918C1F71C31808200C07CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
