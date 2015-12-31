@@ -66,16 +66,6 @@
                ReferencedContainer = "container:TimeLogger.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2918C1E51C31808200C07CCE"
-               BuildableName = "TimeLoggerUITests.xctest"
-               BlueprintName = "TimeLoggerUITests"
-               ReferencedContainer = "container:TimeLogger.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
