@@ -1,10 +1,18 @@
 PODS:
   - GoogleAnalytics (3.14.0)
+  - Realm (0.97.0):
+    - Realm/Headers (= 0.97.0)
+  - Realm/Headers (0.97.0)
+  - RealmSwift (0.97.0):
+    - Realm (= 0.97.0)
 
 DEPENDENCIES:
   - GoogleAnalytics
+  - RealmSwift
 
 SPEC CHECKSUMS:
   GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
+  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
 
 COCOAPODS: 0.39.0
