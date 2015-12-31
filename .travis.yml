@@ -1,3 +1,4 @@
 language: objective-c
 xcode_workspace: TimeLogger.xcworkspace
 xcode_scheme: TimeLogger
+xcode_sdk: iphonesimulator
