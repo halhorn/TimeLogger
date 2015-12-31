@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1469924FC52F60B0068FA24EEFCB3EFC"
-               BuildableName = "libPods.a"
+               BlueprintIdentifier = "8B073427FEF440585251C42C39D12DDC"
+               BuildableName = "Pods.framework"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
@@ -28,8 +28,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D57B61D1639836C10E294970735D381"
-               BuildableName = "libPods-TimeLogger.a"
+               BlueprintIdentifier = "2EAB26BA771A51EC3A43149E19DCC10B"
+               BuildableName = "Pods_TimeLogger.framework"
                BlueprintName = "Pods-TimeLogger"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
