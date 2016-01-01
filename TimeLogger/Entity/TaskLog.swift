@@ -7,45 +7,25 @@
 //
 
 import Foundation
+import RealmSwift
 
-enum TaskLogProperty {
-    case TaskId
-    case GroupId
-    case StartedAt
-    case EndedAt
-}
+class TaskLog : Object, Equatable {
+    dynamic var taskId = 0
+    dynamic var groupId = 0
+    dynamic var startedAt = NSDate(timeIntervalSince1970: 0)
+    dynamic var endedAt : NSDate?
 
-protocol ITaskLogDelegate : class {
-    func didTaskLogUpdate(property : TaskLogProperty, taskLog : TaskLog)
-}
-
-
-class TaskLog : Equatable {
-    private(set) var taskId : Int
-    private(set) var groupId : Int
-    private(set) var startedAt : NSDate
-    private(set) var endedAt : NSDate? {
-        didSet (value) {
-            self.delegate?.didTaskLogUpdate(.EndedAt, taskLog: self)
-        }
-    }
-    
-    weak var delegate : ITaskLogDelegate?
-    
-    init(taskId : Int, groupId : Int, startedAt : NSDate, endedAt : NSDate? = nil) {
-        self.taskId = taskId
-        self.groupId = groupId
-        self.startedAt = startedAt
-        self.endedAt = endedAt
-    }
-    
-    func finalize() {
+    func end() {
         self.endedAt = self.getCurrentDate()
     }
     
     // DI for testing
     var getCurrentDate = {
         return NSDate()
+    }
+    
+    override static func ignoredProperties() -> [String] {
+        return ["getCurrentDate"]
     }
 }
 

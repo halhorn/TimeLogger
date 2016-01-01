@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E9112E8741310722B126D99 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA66AB1DCD4EAD3415A60D7 /* libPods.a */; };
 		2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1C61C31808200C07CCE /* AppDelegate.swift */; };
 		2918C1C91C31808200C07CCE /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1C81C31808200C07CCE /* RootViewController.swift */; };
 		2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1CA1C31808200C07CCE /* DataViewController.swift */; };
@@ -17,14 +16,15 @@
 		2918C1D51C31808200C07CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2918C1D31C31808200C07CCE /* LaunchScreen.storyboard */; };
 		2918C1EB1C31808200C07CCE /* TimeLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918C1EA1C31808200C07CCE /* TimeLoggerUITests.swift */; };
 		292AE2B11C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
-		292AE2B21C33AE05008AB2FA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B01C33AE05008AB2FA /* Task.swift */; };
 		292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B41C33CDFA008AB2FA /* TaskTest.swift */; };
 		292AE2B71C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
-		292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B61C33D815008AB2FA /* TaskLog.swift */; };
 		292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */; };
 		292AE2BC1C33F1F9008AB2FA /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */; };
-		292AE2BD1C33F1F9008AB2FA /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */; };
 		292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */; };
+		292AE2FC1C356C69008AB2FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292AE2FA1C356C69008AB2FA /* Realm.framework */; };
+		292AE2FD1C356C69008AB2FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292AE2FB1C356C69008AB2FA /* RealmSwift.framework */; };
+		292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2FE1C363466008AB2FA /* HALTestCase.swift */; };
+		CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17C5CCBC010A96385D4C67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C17C5CCBC010A96385D4C67 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2918C1C31C31808200C07CCE /* TimeLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2918C1C61C31808200C07CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2918C1C81C31808200C07CCE /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +66,9 @@
 		292AE2B91C33DD08008AB2FA /* TaskLogTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogTest.swift; sourceTree = "<group>"; };
 		292AE2BB1C33F1F9008AB2FA /* TaskGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
 		292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGroupTest.swift; sourceTree = "<group>"; };
-		9EA66AB1DCD4EAD3415A60D7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		292AE2FA1C356C69008AB2FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
+		292AE2FB1C356C69008AB2FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
+		292AE2FE1C363466008AB2FA /* HALTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HALTestCase.swift; sourceTree = "<group>"; };
 		D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9112E8741310722B126D99 /* libPods.a in Frameworks */,
+				292AE2FC1C356C69008AB2FA /* Realm.framework in Frameworks */,
+				292AE2FD1C356C69008AB2FA /* RealmSwift.framework in Frameworks */,
+				CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +144,7 @@
 			children = (
 				292AE2B31C33CDCA008AB2FA /* Entity */,
 				2918C1E11C31808200C07CCE /* Info.plist */,
+				292AE2FE1C363466008AB2FA /* HALTestCase.swift */,
 			);
 			path = TimeLoggerTests;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 		573689D042FB83B8480B1320 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9EA66AB1DCD4EAD3415A60D7 /* libPods.a */,
+				292AE2FA1C356C69008AB2FA /* Realm.framework */,
+				292AE2FB1C356C69008AB2FA /* RealmSwift.framework */,
+				1C17C5CCBC010A96385D4C67 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -386,11 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */,
-				292AE2B21C33AE05008AB2FA /* Task.swift in Sources */,
+				292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */,
 				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
-				292AE2B81C33D815008AB2FA /* TaskLog.swift in Sources */,
-				292AE2BD1C33F1F9008AB2FA /* TaskGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +529,10 @@
 			baseConfigurationReference = D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = TimeLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.halmidi.TimeLogger;
@@ -535,6 +545,10 @@
 			baseConfigurationReference = D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = TimeLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.halmidi.TimeLogger;

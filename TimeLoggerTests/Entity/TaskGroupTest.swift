@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import TimeLogger
 
 class TaskGroupTest: XCTestCase, ITaskGroupDelegate {
     var changedProperty : TaskGroupProperty?
