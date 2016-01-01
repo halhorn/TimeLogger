@@ -23,6 +23,7 @@
 		292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */; };
 		292AE2FC1C356C69008AB2FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292AE2FA1C356C69008AB2FA /* Realm.framework */; };
 		292AE2FD1C356C69008AB2FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292AE2FB1C356C69008AB2FA /* RealmSwift.framework */; };
+		292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2FE1C363466008AB2FA /* HALTestCase.swift */; };
 		CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17C5CCBC010A96385D4C67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		292AE2BE1C33F84E008AB2FA /* TaskGroupTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGroupTest.swift; sourceTree = "<group>"; };
 		292AE2FA1C356C69008AB2FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm.framework"; sourceTree = "<group>"; };
 		292AE2FB1C356C69008AB2FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift.framework"; sourceTree = "<group>"; };
+		292AE2FE1C363466008AB2FA /* HALTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HALTestCase.swift; sourceTree = "<group>"; };
 		D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 			children = (
 				292AE2B31C33CDCA008AB2FA /* Entity */,
 				2918C1E11C31808200C07CCE /* Info.plist */,
+				292AE2FE1C363466008AB2FA /* HALTestCase.swift */,
 			);
 			path = TimeLoggerTests;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				292AE2BF1C33F84E008AB2FA /* TaskGroupTest.swift in Sources */,
+				292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */,
 				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
 			);
