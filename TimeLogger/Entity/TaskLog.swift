@@ -11,7 +11,6 @@ import RealmSwift
 
 class TaskLog : Object, Equatable {
     dynamic var taskId = 0
-    dynamic var groupId = 0
     dynamic var startedAt = NSDate(timeIntervalSince1970: 0)
     dynamic var endedAt : NSDate?
 

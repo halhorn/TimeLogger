@@ -14,16 +14,16 @@ class TaskLogTest: HALTestCase {
     var token : NotificationToken?
     
     func testProperty() {
-        let taskLog = TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)])
+        let taskLog = TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)])
         XCTAssertEqual(taskLog.taskId, 1)
-        XCTAssertEqual(taskLog.groupId, 2)
         XCTAssertEqual(taskLog.startedAt, NSDate(timeIntervalSince1970: 1))
         XCTAssertEqual(taskLog.endedAt, NSDate(timeIntervalSince1970: 10))
     }
     
     func testStore() {
+        
         var notificationCalled = false;
-        let taskLog = TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1)])
+        let taskLog = TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 1)])
         taskLog.getCurrentDate = {
             return NSDate(timeIntervalSince1970: 10)
         }
@@ -44,20 +44,20 @@ class TaskLogTest: HALTestCase {
     
     func testEqual() {
         XCTAssertEqual(
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(value: ["taskId": 2, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
+            TaskLog(value: ["taskId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)]),
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 11)]),
-            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 11)]),
+            TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
     }
 }
