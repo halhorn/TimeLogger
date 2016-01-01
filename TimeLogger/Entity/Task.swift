@@ -10,8 +10,8 @@ import RealmSwift
 
 class Task : Object, Equatable {
     dynamic var taskId = 0
-    dynamic var groupId = 0
     dynamic var name = ""
+    dynamic var color = "#000000"
     dynamic var createdAt = NSDate(timeIntervalSince1970: 0)
 
     override static func primaryKey() -> String? {

@@ -14,16 +14,16 @@ class TaskTest: HALTestCase {
     var token : NotificationToken?
 
     func testProperty() {
-        let task = Task(value: ["taskId": 1, "groupId": 2, "name": "name", "createdAt": NSDate(timeIntervalSince1970: 0)])
+        let task = Task(value: ["taskId": 1, "name": "name", "color": "#ffffff", "createdAt": NSDate(timeIntervalSince1970: 0)])
         XCTAssertEqual(task.taskId, 1)
-        XCTAssertEqual(task.groupId, 2)
         XCTAssertEqual(task.name, "name")
+        XCTAssertEqual(task.color, "#ffffff")
         XCTAssertEqual(task.createdAt, NSDate(timeIntervalSince1970: 0))
     }
     
     func testStore() {
         var notificationCalled = false;
-        let task = Task(value: ["taskId": 1, "groupId": 2, "name": "name", "createdAt": NSDate(timeIntervalSince1970: 0)])
+        let task = Task(value: ["taskId": 1, "name": "name", "color": "#ffffff", "createdAt": NSDate(timeIntervalSince1970: 0)])
         
         let realm2 = try! Realm();
         token = realm2.addNotificationBlock { (notification, realm) -> Void in
