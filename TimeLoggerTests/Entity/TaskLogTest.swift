@@ -7,68 +7,57 @@
 //
 
 import XCTest
+import RealmSwift
 @testable import TimeLogger
 
-class TaskLogTest: XCTestCase, ITaskLogDelegate {
-    var changedProperty : TaskLogProperty?
-    var changedValue : TaskLog?
-    
-    override func setUp() {
-        super.setUp()
-        self.changedProperty = nil
-        self.changedValue = nil
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+class TaskLogTest: HALTestCase {
+    var token : NotificationToken?
     
     func testProperty() {
-        let task = TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
-        XCTAssertEqual(task.taskId, 1)
-        XCTAssertEqual(task.groupId, 2)
-        XCTAssertEqual(task.startedAt, NSDate(timeIntervalSince1970: 0))
-        XCTAssertEqual(task.endedAt, NSDate(timeIntervalSince1970: 10))
+        let taskLog = TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)])
+        XCTAssertEqual(taskLog.taskId, 1)
+        XCTAssertEqual(taskLog.groupId, 2)
+        XCTAssertEqual(taskLog.startedAt, NSDate(timeIntervalSince1970: 1))
+        XCTAssertEqual(taskLog.endedAt, NSDate(timeIntervalSince1970: 10))
     }
     
-    func testNameChange() {
-        let taskLog = TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0))
+    func testStore() {
+        var notificationCalled = false;
+        let taskLog = TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1)])
         taskLog.getCurrentDate = {
-            return NSDate(timeIntervalSince1970: 10);
-        };
-        taskLog.delegate = self;
-        XCTAssertNil(self.changedProperty)
-        XCTAssertNil(self.changedValue)
+            return NSDate(timeIntervalSince1970: 10)
+        }
         
-        taskLog.finalize()
-        XCTAssertEqual(taskLog.endedAt, NSDate(timeIntervalSince1970: 10))
-        XCTAssertEqual(self.changedProperty!, TaskLogProperty.EndedAt)
-        XCTAssertEqual(self.changedValue!, taskLog)
-        XCTAssertEqual(self.changedValue!.endedAt, NSDate(timeIntervalSince1970: 10))
+        let realm2 = try! Realm();
+        token = realm2.addNotificationBlock { (notification, realm) -> Void in
+            notificationCalled = true;
+        }
+        let realm = try! Realm();
+        try! realm.write {
+            realm.add(taskLog)
+            taskLog.end()
+        }
+        XCTAssertEqual(realm.objects(TaskLog).first, taskLog)
+        XCTAssertEqual(realm.objects(TaskLog).first!.endedAt, NSDate(timeIntervalSince1970: 10))
+        XCTAssertTrue(notificationCalled)
     }
     
     func testEqual() {
         XCTAssertEqual(
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10)),
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(taskId: 2, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10)),
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+            TaskLog(value: ["taskId": 2, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 1), endedAt: NSDate(timeIntervalSince1970: 10)),
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 1), "endedAt": NSDate(timeIntervalSince1970: 10)]),
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
         XCTAssertNotEqual(
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 11)),
-            TaskLog(taskId: 1, groupId: 2, startedAt: NSDate(timeIntervalSince1970: 0), endedAt: NSDate(timeIntervalSince1970: 10))
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 11)]),
+            TaskLog(value: ["taskId": 1, "groupId": 2, "startedAt": NSDate(timeIntervalSince1970: 0), "endedAt": NSDate(timeIntervalSince1970: 10)])
         )
-    }
-    
-    func didTaskLogUpdate(property: TaskLogProperty, taskLog: TaskLog) {
-        self.changedProperty = property
-        self.changedValue = taskLog
     }
 }
