@@ -13,19 +13,6 @@ class TaskLog : Object, Equatable {
     dynamic var taskId = 0
     dynamic var startedAt = NSDate(timeIntervalSince1970: 0)
     dynamic var endedAt : NSDate?
-
-    func end() {
-        self.endedAt = self.getCurrentDate()
-    }
-    
-    // DI for testing
-    var getCurrentDate = {
-        return NSDate()
-    }
-    
-    override static func ignoredProperties() -> [String] {
-        return ["getCurrentDate"]
-    }
 }
 
 func == (left : TaskLog, right: TaskLog) -> Bool {
