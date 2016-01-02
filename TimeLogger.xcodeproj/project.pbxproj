@@ -24,6 +24,8 @@
 		292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE2FE1C363466008AB2FA /* HALTestCase.swift */; };
 		292AE3031C36B5FE008AB2FA /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3021C36B5FE008AB2FA /* TaskData.swift */; };
 		292AE3061C36C79C008AB2FA /* TaskDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3051C36C79C008AB2FA /* TaskDataTest.swift */; };
+		292AE3081C37DED0008AB2FA /* TaskLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3071C37DED0008AB2FA /* TaskLogData.swift */; };
+		292AE30A1C37E175008AB2FA /* TaskLogDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */; };
 		CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17C5CCBC010A96385D4C67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		292AE2FE1C363466008AB2FA /* HALTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HALTestCase.swift; sourceTree = "<group>"; };
 		292AE3021C36B5FE008AB2FA /* TaskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 		292AE3051C36C79C008AB2FA /* TaskDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDataTest.swift; sourceTree = "<group>"; };
+		292AE3071C37DED0008AB2FA /* TaskLogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogData.swift; sourceTree = "<group>"; };
+		292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogDataTest.swift; sourceTree = "<group>"; };
 		D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				292AE3021C36B5FE008AB2FA /* TaskData.swift */,
+				292AE3071C37DED0008AB2FA /* TaskLogData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				292AE3051C36C79C008AB2FA /* TaskDataTest.swift */,
+				292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				2918C1C91C31808200C07CCE /* RootViewController.swift in Sources */,
 				2918C1CD1C31808200C07CCE /* ModelController.swift in Sources */,
 				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
+				292AE3081C37DED0008AB2FA /* TaskLogData.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
 				292AE3031C36B5FE008AB2FA /* TaskData.swift in Sources */,
 				2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */,
@@ -413,6 +420,7 @@
 				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
 				292AE3061C36C79C008AB2FA /* TaskDataTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
+				292AE30A1C37E175008AB2FA /* TaskLogDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

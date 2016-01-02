@@ -24,9 +24,6 @@ class TaskLogTest: HALTestCase {
         
         var notificationCalled = false;
         let taskLog = TaskLog(value: ["taskId": 1, "startedAt": NSDate(timeIntervalSince1970: 1)])
-        taskLog.getCurrentDate = {
-            return NSDate(timeIntervalSince1970: 10)
-        }
         
         let realm2 = try! Realm();
         token = realm2.addNotificationBlock { (notification, realm) -> Void in
@@ -35,7 +32,7 @@ class TaskLogTest: HALTestCase {
         let realm = try! Realm();
         try! realm.write {
             realm.add(taskLog)
-            taskLog.end()
+            taskLog.endedAt = NSDate(timeIntervalSince1970: 10)
         }
         XCTAssertEqual(realm.objects(TaskLog).first, taskLog)
         XCTAssertEqual(realm.objects(TaskLog).first!.endedAt, NSDate(timeIntervalSince1970: 10))
