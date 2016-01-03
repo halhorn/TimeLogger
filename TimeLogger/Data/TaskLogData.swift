@@ -28,6 +28,10 @@ class TaskLogData {
         return self.realm?.objects(TaskLog)
     }
     
+    func readCurrentTaskLog() -> TaskLog? {
+        return self.realm?.objects(TaskLog).filter("endedAt == nil").sorted("startedAt", ascending: false).first
+    }
+    
     func end(taskLog : TaskLog) throws -> TaskLog {
         try realm?.write {
             taskLog.endedAt = getCurrentDate()
