@@ -28,6 +28,8 @@
 		292AE30A1C37E175008AB2FA /* TaskLogDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */; };
 		292AE30E1C38F3D2008AB2FA /* LoggingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE30D1C38F3D2008AB2FA /* LoggingModel.swift */; };
 		292AE3111C397061008AB2FA /* LoggingModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3101C397061008AB2FA /* LoggingModelTest.swift */; };
+		292AE31E1C3AB51B008AB2FA /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE31D1C3AB51B008AB2FA /* SettingData.swift */; };
+		292AE3201C3AB9A0008AB2FA /* SettingDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE31F1C3AB9A0008AB2FA /* SettingDataTest.swift */; };
 		CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17C5CCBC010A96385D4C67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogDataTest.swift; sourceTree = "<group>"; };
 		292AE30D1C38F3D2008AB2FA /* LoggingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingModel.swift; sourceTree = "<group>"; };
 		292AE3101C397061008AB2FA /* LoggingModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingModelTest.swift; sourceTree = "<group>"; };
+		292AE31D1C3AB51B008AB2FA /* SettingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
+		292AE31F1C3AB9A0008AB2FA /* SettingDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDataTest.swift; sourceTree = "<group>"; };
 		D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +197,7 @@
 			children = (
 				292AE3021C36B5FE008AB2FA /* TaskData.swift */,
 				292AE3071C37DED0008AB2FA /* TaskLogData.swift */,
+				292AE31D1C3AB51B008AB2FA /* SettingData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			children = (
 				292AE3051C36C79C008AB2FA /* TaskDataTest.swift */,
 				292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */,
+				292AE31F1C3AB9A0008AB2FA /* SettingDataTest.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 			files = (
 				2918C1C91C31808200C07CCE /* RootViewController.swift in Sources */,
 				2918C1CD1C31808200C07CCE /* ModelController.swift in Sources */,
+				292AE31E1C3AB51B008AB2FA /* SettingData.swift in Sources */,
 				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
 				292AE3081C37DED0008AB2FA /* TaskLogData.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
@@ -444,6 +451,7 @@
 				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
 				292AE3061C36C79C008AB2FA /* TaskDataTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
+				292AE3201C3AB9A0008AB2FA /* SettingDataTest.swift in Sources */,
 				292AE30A1C37E175008AB2FA /* TaskLogDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
