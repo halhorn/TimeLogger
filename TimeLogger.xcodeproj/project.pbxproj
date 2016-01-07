@@ -28,8 +28,11 @@
 		292AE30A1C37E175008AB2FA /* TaskLogDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */; };
 		292AE30E1C38F3D2008AB2FA /* LoggingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE30D1C38F3D2008AB2FA /* LoggingModel.swift */; };
 		292AE3111C397061008AB2FA /* LoggingModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3101C397061008AB2FA /* LoggingModelTest.swift */; };
+		292AE3131C3A4ABC008AB2FA /* PreInstallerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3121C3A4ABC008AB2FA /* PreInstallerModel.swift */; };
+		292AE3151C3A7DF6008AB2FA /* PreInstallerModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3141C3A7DF6008AB2FA /* PreInstallerModelTest.swift */; };
 		292AE31E1C3AB51B008AB2FA /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE31D1C3AB51B008AB2FA /* SettingData.swift */; };
 		292AE3201C3AB9A0008AB2FA /* SettingDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE31F1C3AB9A0008AB2FA /* SettingDataTest.swift */; };
+		292AE3231C3EA30F008AB2FA /* MockedSettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292AE3221C3EA30F008AB2FA /* MockedSettingData.swift */; };
 		CE1848326A4B4B25F9D59C05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17C5CCBC010A96385D4C67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +82,11 @@
 		292AE3091C37E175008AB2FA /* TaskLogDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskLogDataTest.swift; sourceTree = "<group>"; };
 		292AE30D1C38F3D2008AB2FA /* LoggingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingModel.swift; sourceTree = "<group>"; };
 		292AE3101C397061008AB2FA /* LoggingModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingModelTest.swift; sourceTree = "<group>"; };
+		292AE3121C3A4ABC008AB2FA /* PreInstallerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreInstallerModel.swift; sourceTree = "<group>"; };
+		292AE3141C3A7DF6008AB2FA /* PreInstallerModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreInstallerModelTest.swift; sourceTree = "<group>"; };
 		292AE31D1C3AB51B008AB2FA /* SettingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		292AE31F1C3AB9A0008AB2FA /* SettingDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDataTest.swift; sourceTree = "<group>"; };
+		292AE3221C3EA30F008AB2FA /* MockedSettingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedSettingData.swift; sourceTree = "<group>"; };
 		D0506C6B60ADA6835DED02A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D29DD4EBC358B376EFA97266 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +162,7 @@
 		2918C1DE1C31808200C07CCE /* TimeLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
+				292AE3211C3EA2E5008AB2FA /* Mock */,
 				292AE3041C36C75D008AB2FA /* Data */,
 				292AE2B31C33CDCA008AB2FA /* Entity */,
 				2918C1E11C31808200C07CCE /* Info.plist */,
@@ -216,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				292AE30D1C38F3D2008AB2FA /* LoggingModel.swift */,
+				292AE3121C3A4ABC008AB2FA /* PreInstallerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,8 +232,17 @@
 			isa = PBXGroup;
 			children = (
 				292AE3101C397061008AB2FA /* LoggingModelTest.swift */,
+				292AE3141C3A7DF6008AB2FA /* PreInstallerModelTest.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		292AE3211C3EA2E5008AB2FA /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				292AE3221C3EA30F008AB2FA /* MockedSettingData.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		573689D042FB83B8480B1320 /* Frameworks */ = {
@@ -434,6 +451,7 @@
 				292AE31E1C3AB51B008AB2FA /* SettingData.swift in Sources */,
 				292AE2B11C33AE05008AB2FA /* Task.swift in Sources */,
 				292AE3081C37DED0008AB2FA /* TaskLogData.swift in Sources */,
+				292AE3131C3A4ABC008AB2FA /* PreInstallerModel.swift in Sources */,
 				2918C1CB1C31808200C07CCE /* DataViewController.swift in Sources */,
 				292AE3031C36B5FE008AB2FA /* TaskData.swift in Sources */,
 				2918C1C71C31808200C07CCE /* AppDelegate.swift in Sources */,
@@ -446,9 +464,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292AE3231C3EA30F008AB2FA /* MockedSettingData.swift in Sources */,
 				292AE2FF1C363466008AB2FA /* HALTestCase.swift in Sources */,
 				292AE3111C397061008AB2FA /* LoggingModelTest.swift in Sources */,
 				292AE2BA1C33DD08008AB2FA /* TaskLogTest.swift in Sources */,
+				292AE3151C3A7DF6008AB2FA /* PreInstallerModelTest.swift in Sources */,
 				292AE3061C36C79C008AB2FA /* TaskDataTest.swift in Sources */,
 				292AE2B51C33CDFA008AB2FA /* TaskTest.swift in Sources */,
 				292AE3201C3AB9A0008AB2FA /* SettingDataTest.swift in Sources */,
