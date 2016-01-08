@@ -41,6 +41,17 @@ class TaskLogDataTest: HALTestCase {
         XCTAssertEqual(results![1], log2)
     }
     
+    func testCurrentTaskLog() {
+        self.time = 1
+        XCTAssertNil(self.taskLogData!.readCurrentTaskLog())
+        let log1 = try! self.taskLogData!.create(taskId: 1)
+        self.time = 10
+        try! self.taskLogData?.end(log1)
+        let log2 = try! self.taskLogData!.create(taskId: 2)
+        
+        XCTAssertEqual(self.taskLogData!.readCurrentTaskLog(), log2)
+    }
+    
     func testEnd() {
         self.time = 1
         let log1 = try! self.taskLogData!.create(taskId: 1)
